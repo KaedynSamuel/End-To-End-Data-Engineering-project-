@@ -42,6 +42,11 @@ flowchart LR
     KeyVault[🔑 Azure Key Vault] --- DB
     KeyVault --- DF
 
+
+
+
+
+
 ## How the Project Works
 
 This project implements a full **end-to-end data engineering pipeline** using Azure services. The flow is designed for efficiency, scalability, and security. Here's how it works step by step:
