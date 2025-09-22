@@ -23,9 +23,21 @@ The project uses the following Azure components:
 
 ```mermaid
 flowchart LR
-    Storage[Azure Storage Account] --> DF[Azure Data Factory]
-    DF --> DB[Azure Databricks]
-    DB --> Syn[Azure Synapse Analytics]
-    Syn --> PB[Power BI Dataset]
-    KeyVault[Azure Key Vault] --- DB
+    %% Data Source
+    SMSSData[📥 SMSS Data Source] --> Storage[🗄️ Azure Storage Account]
+
+    %% Pipelines
+    Storage --> DF[🔄 Azure Data Factory]
+
+    %% Transformation
+    DF --> DB[💻 Azure Databricks]
+
+    %% Analytics
+    DB --> Syn[📊 Azure Synapse Analytics]
+
+    %% Reporting
+    Syn --> PB[📈 Power BI Dataset]
+
+    %% Security
+    KeyVault[🔑 Azure Key Vault] --- DB
     KeyVault --- DF
