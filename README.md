@@ -26,5 +26,6 @@ flowchart LR
     Storage[Azure Storage Account] --> DF[Azure Data Factory]
     DF --> DB[Azure Databricks]
     DB --> Syn[Azure Synapse Analytics]
+    Syn --> PB[Power BI Dataset]
     KeyVault[Azure Key Vault] --- DB
     KeyVault --- DF
